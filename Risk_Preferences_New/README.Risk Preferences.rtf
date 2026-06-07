@@ -1,0 +1,118 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Oblique;\f2\fswiss\fcharset0 Helvetica-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red26\green26\blue26;
+\red11\green76\blue180;\red49\green49\blue49;\red0\green0\blue233;\red56\green101\blue115;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c13333\c13333\c13333;
+\cssrgb\c1961\c38824\c75686;\cssrgb\c25098\c25098\c25098;\cssrgb\c0\c0\c93333;\cssrgb\c27451\c47059\c52549;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28300\viewh17700\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 README FILE\
+---------------\
+Title: Exposure to Macroeconomic Crises and Risk Preferences\
+Authors: Bernard Sarpong and Jun Goto\
+Date: November 2025\
+Software: Stata 18\
+\
+OVERVIEW\
+-----------------\
+This dataset and accompanying Stata do-files support the paper \'93Exposure to Macroeconomic Crises and Risk Preferences."\
+The study examines whether exposure to macroeconomic crises during early adulthood (ages 18\'9625) has long-term effects on individuals\'92\
+risk preferences, and whether the policy environment at the time moderates this relationship. The analysis combines individual-level\
+data from the Global Preferences Survey (Falk et al., 2018) with macroeconomic crisis episodes identified from Barro and Urs\'faa (2008)\
+and the Maddison Project Database (2023). The Stata scripts perform data preparation, treatment construction, merging, estimation,\
+and robustness checks, including varying thresholds of macroeconomic decline (\uc0\u8805  9% to \u8805  3%). The empirical approach employs OLS and\
+high-dimensional fixed effects models with cohort-country clustered standard errors. Required packages include reghdfe, estout, coefplot, and psacalc. \
+All datasets are publicly available and must be obtained from the original providers. The code ensures full replication of\
+All results, tables, and figures are presented in the paper.\
+\
+Purpose of the Code\
+-------------------\
+The Stata do-files implement all empirical procedures used in the study, including data preparation, merging, treatment\
+assignment, estimation, and generation of summary statistics and figures.\
+\
+Data Sources\
+-------------\
+1. Global Preferences Survey (GPS): \cf2 \cb3 \expnd0\expndtw0\kerning0
+Falk, A., Becker, A., Dohmen, T., Enke, B., Huffman, D., & Sunde, U. (2018). Global evidence on economic preferences.\'a0
+\f1\i The quarterly journal of economics
+\f0\i0 ,\'a0
+\f1\i 133
+\f0\i0 (4), 1645-1692. \cf4 Retrieved June 06, 2024, from\cf2  {\field{\*\fldinst{HYPERLINK "https://doi.org/10.1093/qje/qjy013"}}{\fldrslt \cf5 \ul \ulc5 https://doi.org/10.1093/qje/qjy013}} \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+2. Barro and Urs\'faa (2008) dataset on macroeconomic crises: \cf4 \cb3 \expnd0\expndtw0\kerning0
+Barro, R. J., & Urs\'faa, J. F. (2008). Macroeconomic Crises since 1870.\'a0
+\f1\i Brookings Papers on Economic Activity
+\f0\i0 ,\'a0
+\f1\i 2008
+\f0\i0 (1), 255-350.\cf0 \cb1 \kerning1\expnd0\expndtw0 \
+3. Maddison Project Database (2023) for real GDP per capita data: \cf4 \cb3 \expnd0\expndtw0\kerning0
+Bolt, J., & Van Zanden, J. L. (2024). Maddison\uc0\u8208 style estimates of the evolution of the world economy: A new 2023 update.\'a0
+\f1\i Journal of Economic Surveys
+\f0\i0 ,\cf6  \cf4 1\'9641.\'a0Retrieved June 29, 2024, from \cf2 \cb1 \'a0{\field{\*\fldinst{HYPERLINK "https://doi.org/10.1111/joes.12618"}}{\fldrslt \cf7 \cb3 \ul \ulc7 https://doi.org/10.1111/joes.12618}}
+\f2\b \cf8 \cb3 \ul \ulc8  
+\f0\b0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \ulnone \
+4. Political Regime (i.e., Democracy) drawn from standard cross-country databases: \cf4 \cb3 \expnd0\expndtw0\kerning0
+V-Dem (2024) \'96 processed by Our World in Data. \'93Political regime\'94 [dataset]. V-Dem, \'93V-Dem Country-Year (Full + Others) v14\'94 [original data]. Retrieved July 8, 2024, from {\field{\*\fldinst{HYPERLINK "https://ourworldindata.org/grapher/political-regime"}}{\fldrslt \cf5 \ul \ulc5 https://ourworldindata.org/grapher/political-regime}}\cf2 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 5. \cf2 \expnd0\expndtw0\kerning0
+Equal resource distribution index\cf0 \kerning1\expnd0\expndtw0  (i.e., Redistribution) \cf2 \expnd0\expndtw0\kerning0
+V-Dem (2024) \'96 processed by Our World in Data. \'93Equal resource distribution index \'96 (best estimate)\'94 [dataset]. V-Dem, \'93V-Dem Country-Year (Full + Others) v14\'94 [original data]. Retrieved November 4, 2024, from {\field{\*\fldinst{HYPERLINK "https://ourworldindata.org/grapher/equal-resource-distribution-index"}}{\fldrslt \cf5 \ul \ulc5 https://ourworldindata.org/grapher/equal-resource-distribution-index}}\cf5 \ul \ulc5  \cf0 \kerning1\expnd0\expndtw0 \ulnone \
+6. Cross-country labour market entry age drawn from \cf2 \expnd0\expndtw0\kerning0
+International Labour Organization. (1973). 
+\f1\i Minimum Age Convention, 1973 (No. 138)
+\f0\i0 . Retrieved July 31, 2025, from {\field{\*\fldinst{HYPERLINK "https://www.ilo.org/dyn/normlex/en/f?p=NORMLEXPUB:12100:0::NO::P12100_INSTRUMENT_ID:312283"}}{\fldrslt \cf8 \ul \ulc8 https://www.ilo.org/dyn/normlex/en/f?p=NORMLEXPUB:12100:0::NO::P12100_INSTRUMENT_ID:312283}}\cf0 \kerning1\expnd0\expndtw0 \
+7. School-leaving ages collected from: \cf4 \cb3 \expnd0\expndtw0\kerning0
+UNESCO Institute for Statistics. (2025). 
+\f1\i Duration of compulsory education
+\f0\i0  [Dataset; minor processing by Our World in Data]. In UNESCO Institute for Statistics (UIS) \'96 Education [Original data]. Our World in Data. Retrieved August 2, 2025 from {\field{\*\fldinst{HYPERLINK "https://archive.ourworldindata.org/20250625-161807/grapher/duration-of-compulsory-education.html"}}{\fldrslt \cf8 \ul \ulc8 https://archive.ourworldindata.org/20250625-161807/grapher/duration-of-compulsory-education.html}}\cf8 \ul \ulc8 . \cf2 \cb1 \ulnone  \cf4 \cb3 UNESCO Institute for Statistics. (2025). 
+\f1\i Official entrance age to compulsory education (years) 
+\f0\i0 [Dataset]. UIS Data Browser. Retrieved August 2, 2025 from {\field{\*\fldinst{HYPERLINK "https://databrowser.uis.unesco.org/view#indicatorPaths=UIS-EducationOPRI%3A0%3A401&geoMode=countries&geoUnits=&browsePath=EDUCATION%2FUIS-EducationOPRI%2Fentrance-duration&timeMode=range&view=table&chartMode=multiple&tableIndicatorId=401&chartIndicatorId=401&chartHighlightSeries=&chartHighlightEnabled=true"}}{\fldrslt \cf8 \ul https://databrowser.uis.unesco.org/view#indicatorPaths=UIS-EducationOPRI%3A0%3A401&geoMode=countries&geoUnits=&browsePath=EDUCATION%2FUIS-EducationOPRI%2Fentrance-duration&timeMode=range&view=table&chartMode=multiple&tableIndicatorId=401&chartIndicatorId=}}\cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\
+Code Structure\
+--------------\
+1. **Data Preparation**\
+   - Loads and cleans GPS individual-level data.\
+   - Merges with country-level macroeconomic crisis data.\
+   - Harmonises variable names and constructs relevant covariates.\
+\
+2. **Treatment Variable Construction**\
+   - Identifies crisis episodes following Barro and Urs\'faa (2008): cumulative and consecutive declines of at least 10%\
+     in real GDP per capita between the peak and the first year of positive growth.\
+   - Assigns exposure during impressionable years (ages 18\'9625) to determine whether an individual was affected by a crisis.\
+   - Constructs both binary and continuous exposure indicators.\
+\
+3. **Model Estimation**\
+   - Runs baseline OLS and high-dimensional fixed effects models (using `reghdfe`).\
+   - Controls include sex, cognitive ability, democracy, and government redistribution levels.\
+   - Standard errors are clustered at the cohort-country level.\
+\
+4. **Robustness and Sensitivity Analyses**\
+   - Tests robustness to alternative crisis-severity thresholds (\uc0\u8805 9% to \u8805 3% GDP decline).\
+   - Performs sensitivity analyses.\
+   - Conducts heterogeneity analysis based on redistribution environments.\
+\
+5. **Output Generation**\
+   - Exports regression tables, descriptive summaries, and coefficient plots for publication figures.\
+\
+Required Stata Packages\
+-----------------------\
+- reghdfe (for fixed-effects estimation)\
+- estout (for storing regression results)\
+- coefplot (for coefficient plots)\
+- outreg2 (for regression output formatting)\
+-psacalc (to execute the Oster (2019) test)\
+- ftools (dependency for reghdfe)\
+\
+Reproducibility Notes\
+---------------------\
+- All datasets must be stored in the same working directory before execution.\
+- File paths should be updated in the \'93global directory\'94 section of the do-file.\
+- Run the code sequentially to ensure full replication of results.\
+\
+Contact\
+-------\
+For replication or data access queries, please contact:\
+Bernard Sarpong\
+Email: bernardosarpong@gmail.com\
+Institution: xxxxxx}
