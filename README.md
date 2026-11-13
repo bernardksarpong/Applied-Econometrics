@@ -1,2 +1,2 @@
 # Applied-Econometrics
-This repository serves as a hub for all my applied econometrics codes generated in stata
+This repository serves as a hub for my working papers and all codes generated in stata
